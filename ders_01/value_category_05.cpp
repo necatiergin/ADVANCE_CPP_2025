@@ -42,6 +42,7 @@ int main()
 	pvc(rr);  // LValue
 	pvc(++x);  // LValue
 	pvc(--x);  // LValue
+	pvec(static_cast<int&>(x));
 	pvc(func); //LVALUE
 	pvc(foo); //LVALUE
 	pvc(foo()); //LVALUE
