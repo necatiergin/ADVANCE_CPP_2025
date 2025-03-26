@@ -3,9 +3,11 @@ struct Nrc {};
 Nec nec;
 const Nec cnec;
 
-argument                Nec&          
-===========             =====
-nec
+                        PARAMS FOR OVERLOADS
+
+argument                Nec&      const Nec&       Nec&&      const Nec&&
+===========             =====     ==========       =====      ===========
+nec                        1           2             X             X               
 cnec
 Nec{}
 std::move(cnec)
