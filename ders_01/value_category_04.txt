@@ -1,0 +1,11 @@
+struct Nrc {};
+
+Nec nec;
+const Nec cnec;
+
+argument                Nec&          
+===========             =====
+nec
+cnec
+Nec{}
+std::move(cnec)
