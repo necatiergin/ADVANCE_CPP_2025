@@ -1,0 +1,25 @@
+#include <iostream>
+#include <utility>
+
+class Myclass {
+public:
+	Myclass() = default;
+
+	Myclass(const Myclass&)
+	{
+		std::cout << "copy ctor\n";
+	}
+
+	Myclass(Myclass&&)
+	{
+		std::cout << "move ctor\n";
+	}
+};
+
+int main()
+{
+	const Myclass x;
+
+	Myclass y = std::move(x);
+	//y is copy constructed
+}
